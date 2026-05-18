@@ -86,7 +86,8 @@
   .tag-i { background: var(--red2); color: var(--red); }
   .tag-f { background: var(--yellow2); color: var(--yellow); }
   .tag-v { background: rgba(73,79,223,0.12); color: var(--accent2); }
-  .card-url { margin-top: 14px; font-size: 0.75rem; }
+  .card-url { margin-top: 14px; font-size: 0.75rem; display: none; }
+  .card { cursor: pointer; }
   .card-url a { color: var(--text3); text-decoration: none; border-bottom: 1px solid transparent; transition: all .15s; }
   .card-url a:hover { color: var(--accent2); border-color: var(--accent2); }
   .verify { font-size: 0.7rem; margin-top: 8px; padding: 3px 10px; border-radius: 9999px; display: inline-block; }
@@ -736,5 +737,30 @@ function setTheme(t) {
   <a href="https://github.com/Klausc06/uk-credit-cards">GitHub: Klausc06/uk-credit-cards</a> · <a href="https://github.com/Klausc06/uk-credit-cards/blob/main/uk-all-cards-complete.md">📄 完整Markdown版(69KB)</a>
 </div>
 
+<script>
+// Make entire card clickable — open official page in new tab
+document.querySelectorAll('.card-grid .card').forEach(card => {
+  const a = card.querySelector('.card-url a');
+  if (!a?.href) return;
+  card.addEventListener('click', (e) => {
+    if (e.target.closest('a, button, input')) return;
+    window.open(a.href, '_blank', 'noopener');
+  });
+  card.title = '🖱 点击打开官网';
+});
+// Blocked sections: click to open bank URL
+document.querySelectorAll('.blocked-section').forEach(block => {
+  const urlDiv = block.querySelector('.url');
+  if (!urlDiv) return;
+  const match = urlDiv.textContent.match(/https:\\/\\/[^\\s]+/);
+  if (!match) return;
+  block.style.cursor = 'pointer';
+  block.addEventListener('click', (e) => {
+    if (e.target.closest('a, button, input')) return;
+    window.open(match[0], '_blank', 'noopener');
+  });
+  block.title = '🖱 点击打开银行官网';
+});
+</script>
 </body>
 </html>
