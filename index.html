@@ -740,23 +740,23 @@ function setTheme(t) {
 <script>
 // Make entire card clickable — open official page in new tab
 document.querySelectorAll('.card-grid .card').forEach(card => {
-  const a = card.querySelector('.card-url a');
+  const a = card.querySelector('a[href]');
   if (!a?.href) return;
   card.addEventListener('click', (e) => {
-    if (e.target.closest('a, button, input')) return;
+    if (e.target.closest('a, button, input, .card-url a')) return;
     window.open(a.href, '_blank', 'noopener');
   });
-  card.title = '🖱 点击打开官网';
+  card.title = '🖱 点击打开官网 · ' + a.textContent.replace('🔗 ','').trim();
 });
 // Blocked sections: click to open bank URL
 document.querySelectorAll('.blocked-section').forEach(block => {
   const urlDiv = block.querySelector('.url');
   if (!urlDiv) return;
-  const match = urlDiv.textContent.match(/https:\\/\\/[^\\s]+/);
+  const match = urlDiv.textContent.match(/https:\/\/[^\s]+/);
   if (!match) return;
   block.style.cursor = 'pointer';
   block.addEventListener('click', (e) => {
-    if (e.target.closest('a, button, input')) return;
+    if (e.target.closest('a, button')) return;
     window.open(match[0], '_blank', 'noopener');
   });
   block.title = '🖱 点击打开银行官网';
