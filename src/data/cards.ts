@@ -1,4 +1,4 @@
-import type { CreditCard } from './types';
+import type { CreditCard, CardCategory } from './types';
 
 export const cards: CreditCard[] = [
   // ═══════════════════ AMEX ═══════════════════
@@ -21,7 +21,12 @@ export const cards: CreditCard[] = [
     loungeAccess: { type: 'priority-pass', visits: 'unlimited', guestPolicy: '可带1人' },
     travelInsurance: '全面旅行险·含家属',
     incomeRequirement: '£35,000',
-    specialFeatures: ['£200餐饮credit', '£200旅行credit', '£100 Harvey Nichols', '酒店/租车高级会籍'],
+    specialFeatures: [
+      '£200餐饮credit',
+      '£200旅行credit',
+      '£100 Harvey Nichols',
+      '酒店/租车高级会籍',
+    ],
     pros: ['开卡奖励丰厚', '无限Priority Pass', '全面旅行保险'],
     cons: ['年费极高£650', '海外交易费2.99%'],
     url: 'https://www.americanexpress.com/en-gb/credit-cards/platinum-card/',
@@ -72,7 +77,7 @@ export const cards: CreditCard[] = [
     ],
     representativeApr: 35.8,
     foreignTransactionFee: 2.99,
-    specialFeatures: ['Nectar积分可在Sainsbury\'s等使用'],
+    specialFeatures: ["Nectar积分可在Sainsbury's等使用"],
     pros: ['首年免年费', 'Nectar生态广泛'],
     cons: ['年费£30', '海外交易费2.99%'],
     url: 'https://www.americanexpress.com/en-gb/credit-cards/nectar-credit-card/',
@@ -114,9 +119,7 @@ export const cards: CreditCard[] = [
     category: ['airline'],
     annualFee: 'free',
     signUpBonus: { amount: '5,000', currency: 'Avios', spendRequirement: '£2,000/3个月' },
-    earnRate: [
-      { rate: '1x', description: '所有消费Avios' },
-    ],
+    earnRate: [{ rate: '1x', description: '所有消费Avios' }],
     representativeApr: 29.1,
     foreignTransactionFee: 2.99,
     travelInsurance: '意外险',
@@ -209,9 +212,7 @@ export const cards: CreditCard[] = [
     category: ['rewards'],
     annualFee: 'free',
     signUpBonus: { amount: '10,000', currency: 'MR积分', spendRequirement: '£2,000/3个月' },
-    earnRate: [
-      { rate: '1x', description: '所有消费MR积分' },
-    ],
+    earnRate: [{ rate: '1x', description: '所有消费MR积分' }],
     representativeApr: 29.1,
     foreignTransactionFee: 2.99,
     travelInsurance: '意外险£150k',
@@ -259,9 +260,7 @@ export const cards: CreditCard[] = [
     annualFee: 240,
     annualFeeNote: '£20/月',
     signUpBonus: { amount: '25,000', currency: 'Avios', spendRequirement: '£3,000/3个月' },
-    earnRate: [
-      { rate: '1.5x', description: '每£1获1.5 Avios', isHighlight: true },
-    ],
+    earnRate: [{ rate: '1.5x', description: '每£1获1.5 Avios', isHighlight: true }],
     representativeApr: 80.1,
     foreignTransactionFee: 2.99,
     specialFeatures: ['年消费£10,000可选BA舱位升级券或7,000额外Avios'],
@@ -281,9 +280,7 @@ export const cards: CreditCard[] = [
     category: ['airline'],
     annualFee: 'free',
     signUpBonus: { amount: '5,000', currency: 'Avios', spendRequirement: '£1,000/3个月' },
-    earnRate: [
-      { rate: '1x', description: '每£1获1 Avios' },
-    ],
+    earnRate: [{ rate: '1x', description: '每£1获1 Avios' }],
     representativeApr: 29.9,
     foreignTransactionFee: 2.99,
     specialFeatures: ['年消费£20,000可选BA舱位升级券'],
@@ -302,9 +299,7 @@ export const cards: CreditCard[] = [
     network: 'visa',
     category: ['cashback', 'travel'],
     annualFee: 'free',
-    earnRate: [
-      { rate: '0.25%', description: '所有合格消费返现' },
-    ],
+    earnRate: [{ rate: '0.25%', description: '所有合格消费返现' }],
     representativeApr: 28.9,
     foreignTransactionFee: 0,
     specialFeatures: ['免海外交易费', 'Visa竞争性汇率'],
@@ -323,7 +318,11 @@ export const cards: CreditCard[] = [
     network: 'visa',
     category: ['rewards', 'cashback'],
     annualFee: 'free',
-    signUpBonus: { amount: '£40', currency: 'Amazon礼品卡', spendRequirement: '2026年7月16日前获批' },
+    signUpBonus: {
+      amount: '£40',
+      currency: 'Amazon礼品卡',
+      spendRequirement: '2026年7月16日前获批',
+    },
     earnRate: [
       { rate: '1%', description: 'Amazon消费', isHighlight: true },
       { rate: '0.5%', description: '其他消费（12个月后降至0.25%）' },
@@ -478,10 +477,12 @@ export const cards: CreditCard[] = [
     network: 'mastercard',
     category: ['rewards'],
     annualFee: 'free',
-    signUpBonus: { amount: '5,000', currency: '积分(价值£50)', spendRequirement: '首次交易+90天内£500' },
-    earnRate: [
-      { rate: '积分', description: '每笔合格消费赚积分' },
-    ],
+    signUpBonus: {
+      amount: '5,000',
+      currency: '积分(价值£50)',
+      spendRequirement: '首次交易+90天内£500',
+    },
+    earnRate: [{ rate: '积分', description: '每笔合格消费赚积分' }],
     representativeApr: 26.9,
     foreignTransactionFee: 2.99,
     purchaseOffer: { rate: 0, durationMonths: 6 },
@@ -712,9 +713,7 @@ export const cards: CreditCard[] = [
     network: 'mastercard',
     category: ['cashback'],
     annualFee: 'free',
-    earnRate: [
-      { rate: '0.25%', description: '所有消费返现' },
-    ],
+    earnRate: [{ rate: '0.25%', description: '所有消费返现' }],
     representativeApr: 23.9,
     foreignTransactionFee: 2.99,
     pros: ['免年费', '简单返现'],
@@ -963,9 +962,7 @@ export const cards: CreditCard[] = [
     category: ['cashback', 'travel', 'balance-transfer'],
     annualFee: 36,
     annualFeeNote: '£3/月',
-    earnRate: [
-      { rate: '0.5%', description: '所有消费返现(上限£10/月)', isHighlight: true },
-    ],
+    earnRate: [{ rate: '0.5%', description: '所有消费返现(上限£10/月)', isHighlight: true }],
     representativeApr: 29.8,
     foreignTransactionFee: 0,
     purchaseOffer: { rate: 0, durationMonths: 15 },
@@ -1010,9 +1007,7 @@ export const cards: CreditCard[] = [
     category: ['travel', 'cashback'],
     annualFee: 180,
     annualFeeNote: '£15/月，仅限Select/Private Banking客户',
-    earnRate: [
-      { rate: '0.5%', description: '所有消费返现(上限£15/月)', isHighlight: true },
-    ],
+    earnRate: [{ rate: '0.5%', description: '所有消费返现(上限£15/月)', isHighlight: true }],
     representativeApr: 49.8,
     foreignTransactionFee: 0,
     purchaseOffer: { rate: 0, durationMonths: 18 },
@@ -1308,7 +1303,11 @@ export const cards: CreditCard[] = [
     network: 'mastercard',
     category: ['airline', 'travel'],
     annualFee: 160,
-    signUpBonus: { amount: '18,000', currency: 'Virgin Points', spendRequirement: '首笔消费(90天内)' },
+    signUpBonus: {
+      amount: '18,000',
+      currency: 'Virgin Points',
+      spendRequirement: '首笔消费(90天内)',
+    },
     earnRate: [
       { rate: '1.5pt', description: '日常消费每£1', isHighlight: true },
       { rate: '3pt', description: 'Virgin Atlantic消费每£1', isHighlight: true },
@@ -1332,7 +1331,11 @@ export const cards: CreditCard[] = [
     network: 'mastercard',
     category: ['airline'],
     annualFee: 'free',
-    signUpBonus: { amount: '3,000', currency: 'Virgin Points', spendRequirement: '首笔消费(90天内)' },
+    signUpBonus: {
+      amount: '3,000',
+      currency: 'Virgin Points',
+      spendRequirement: '首笔消费(90天内)',
+    },
     earnRate: [
       { rate: '0.75pt', description: '日常消费每£1' },
       { rate: '1.5pt', description: 'Virgin Atlantic消费每£1', isHighlight: true },
@@ -1683,9 +1686,7 @@ export const cards: CreditCard[] = [
     category: ['purchase', 'cashback'],
     annualFee: 'free',
     annualFeeNote: '需Monzo账户',
-    earnRate: [
-      { rate: '返现', description: '合作品牌消费返现' },
-    ],
+    earnRate: [{ rate: '返现', description: '合作品牌消费返现' }],
     representativeApr: 29.0,
     foreignTransactionFee: 0,
     specialFeatures: ['£100+消费可选3个月0%分期', '可追溯2周内消费分期', '7天宽限期无罚款'],
@@ -1704,9 +1705,7 @@ export const cards: CreditCard[] = [
     network: 'mastercard',
     category: ['credit-builder'],
     annualFee: 'free',
-    earnRate: [
-      { rate: '返现', description: '合作品牌消费返现' },
-    ],
+    earnRate: [{ rate: '返现', description: '合作品牌消费返现' }],
     representativeApr: 39.0,
     foreignTransactionFee: 0,
     specialFeatures: ['额度最高£750', '信用建设'],
@@ -1825,9 +1824,7 @@ export const cards: CreditCard[] = [
     network: 'mastercard',
     category: ['other'],
     annualFee: 'free',
-    earnRate: [
-      { rate: '最高5%', description: '精选商家返现' },
-    ],
+    earnRate: [{ rate: '最高5%', description: '精选商家返现' }],
     representativeApr: 0,
     foreignTransactionFee: 0,
     foreignTransactionFeeNote: '每月£250免手续费额度',
@@ -1995,13 +1992,14 @@ export const cards: CreditCard[] = [
     network: 'mastercard',
     category: ['cashback', 'travel'],
     annualFee: 'free',
-    earnRate: [
-      { rate: '0.25%', description: '前36个月返现(无上限)' },
-    ],
+    earnRate: [{ rate: '0.25%', description: '前36个月返现(无上限)' }],
     representativeApr: 12.9,
     foreignTransactionFee: 0,
     foreignTransactionFeeNote: '前36个月免外汇费，之后2.95%',
-    specialFeatures: ['前36个月0.25%返现无上限+免外汇费', '⚠️ 返现和免外汇费仅限前36个月，之后返现停止、外汇费2.95%'],
+    specialFeatures: [
+      '前36个月0.25%返现无上限+免外汇费',
+      '⚠️ 返现和免外汇费仅限前36个月，之后返现停止、外汇费2.95%',
+    ],
     pros: ['APR仅12.9%', '前36个月免外汇费+返现'],
     cons: ['36个月后外汇费2.95%+返现停止', '返现率仅0.25%'],
     url: 'https://www.mbna.co.uk/',
@@ -2018,9 +2016,7 @@ export const cards: CreditCard[] = [
     network: 'visa',
     category: ['cashback'],
     annualFee: 'free',
-    earnRate: [
-      { rate: '0.5%', description: '£5,000以上消费返现' },
-    ],
+    earnRate: [{ rate: '0.5%', description: '£5,000以上消费返现' }],
     representativeApr: 18.9,
     foreignTransactionFee: 2.75,
     specialFeatures: ['低提现手续费'],
@@ -2034,13 +2030,13 @@ export const cards: CreditCard[] = [
 ];
 
 export function getCardById(id: string): CreditCard | undefined {
-  return cards.find(c => c.id === id);
+  return cards.find((c) => c.id === id);
 }
 
 export function getUniqueIssuers(): string[] {
-  return [...new Set(cards.map(c => c.issuer))].sort();
+  return [...new Set(cards.map((c) => c.issuer))].sort();
 }
 
-export function getCardsByCategory(category: string): CreditCard[] {
-  return cards.filter(c => c.category.includes(category as any));
+export function getCardsByCategory(category: CardCategory): CreditCard[] {
+  return cards.filter((c) => c.category.includes(category));
 }

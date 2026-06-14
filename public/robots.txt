@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://klausc06.github.io/uk-credit-cards/sitemap.xml

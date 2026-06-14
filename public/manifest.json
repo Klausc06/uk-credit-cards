@@ -1,0 +1,27 @@
+{
+  "name": "英国信用卡全面对比 2026",
+  "short_name": "UK Credit Cards",
+  "description": "覆盖英国主流银行90+张信用卡的全面对比，包含旅行卡、返现卡、积分卡、余额转账卡等6大类别，所有数据经官网核实。",
+  "start_url": "/uk-credit-cards/",
+  "display": "standalone",
+  "background_color": "#0f1117",
+  "theme_color": "#0f1117",
+  "orientation": "any",
+  "scope": "/uk-credit-cards/",
+  "lang": "zh-CN",
+  "categories": ["finance", "utilities"],
+  "icons": [
+    {
+      "src": "/uk-credit-cards/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/uk-credit-cards/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
