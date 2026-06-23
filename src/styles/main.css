@@ -75,6 +75,7 @@ body {
   letter-spacing: -0.03em;
   line-height: 1.15;
   margin-bottom: 12px;
+  text-wrap: balance;
 }
 
 .header .subtitle {
@@ -108,6 +109,7 @@ body {
   font-size: 1.6rem;
   font-weight: 700;
   color: var(--accent2);
+  font-variant-numeric: tabular-nums;
 }
 
 .stat-card .label {
@@ -185,7 +187,7 @@ body {
   background: transparent;
   color: var(--text2);
   cursor: pointer;
-  transition: all var(--transition);
+  transition: border-color var(--transition), color var(--transition), background var(--transition);
   font-family: inherit;
   white-space: nowrap;
 }
@@ -231,7 +233,7 @@ body {
   color: var(--text2);
   cursor: pointer;
   font-family: inherit;
-  transition: all var(--transition);
+  transition: background var(--transition), border-color var(--transition), color var(--transition);
 }
 
 .toggle-btn.active {
@@ -255,8 +257,8 @@ body {
 }
 
 .theme-btn {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border-radius: 999px;
   border: none;
   background: transparent;
@@ -265,7 +267,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all var(--transition);
+  transition: background var(--transition);
 }
 
 .theme-btn.active {
@@ -286,7 +288,7 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 20px;
-  transition: all var(--transition);
+  transition: border-color var(--transition), background var(--transition), box-shadow var(--transition), transform var(--transition);
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -306,6 +308,7 @@ body {
   left: 0;
   right: 0;
   height: 3px;
+  border-radius: var(--radius) var(--radius) 0 0;
 }
 
 .card[data-network="amex"]::before { background: var(--amex); }
@@ -337,6 +340,7 @@ body {
   font-size: 1.3rem;
   font-weight: 800;
   color: var(--accent2);
+  font-variant-numeric: tabular-nums;
 }
 
 .card-fee .free {
@@ -386,6 +390,7 @@ body {
   text-align: right;
   font-weight: 500;
   flex: 1;
+  font-variant-numeric: tabular-nums;
 }
 
 .spec-value.highlight { color: var(--green); font-weight: 700; }
