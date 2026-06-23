@@ -149,7 +149,7 @@ export function setLang(lang: Lang) {
 }
 
 export function t(key: Key, vars?: Record<string, string | number>): string {
-  let text = translations[key][currentLang] || translations[key].zh;
+  let text: string = translations[key][currentLang] || translations[key].zh;
   if (vars) {
     for (const [k, v] of Object.entries(vars)) {
       text = text.replace(`{${k}}`, String(v));
